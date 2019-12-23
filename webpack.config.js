@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
@@ -16,6 +17,9 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -47,7 +51,15 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: [
+          'babel-loader',
+          {
+            loader: 'linaria/loader',
+            options: {
+              sourceMap: process.env.NODE_ENV !== 'production',
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
@@ -77,6 +89,23 @@ module.exports = {
             options: {
               publicPath: '/',
               name: 'img/[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV !== 'production',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: process.env.NODE_ENV !== 'production',
             },
           },
         ],

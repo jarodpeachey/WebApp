@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Close from '@material-ui/icons/Close';
 import Check from '@material-ui/icons/Check';
 import { renderLog } from '../../utils/logging';

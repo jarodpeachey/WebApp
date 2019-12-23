@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withTheme } from '@material-ui/core/styles';
 import IssueFollowToggleButton from './IssueFollowToggleButton';
 import { convertNameToSlug, shortenText } from '../../utils/textFormat';

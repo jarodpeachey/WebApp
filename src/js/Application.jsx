@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
 import { ToastContainer } from 'react-toastify';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { getApplicationViewBooleans, polyfillObjectEntries, setZenDeskHelpVisibility } from './utils/applicationUtils';
 import cookies from './utils/cookies';
 import { getToastClass, historyPush, isCordova, isWebApp } from './utils/cordovaUtils';

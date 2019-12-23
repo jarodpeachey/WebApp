@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'react-bootstrap';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import AppActions from '../../actions/AppActions';

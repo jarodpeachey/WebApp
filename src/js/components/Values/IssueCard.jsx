@@ -1,7 +1,7 @@
 /* eslint-disable quotes */
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import PropTypes from 'prop-types';
 import IssueFollowToggleButton from './IssueFollowToggleButton';
 import IssueImageDisplay from './IssueImageDisplay';

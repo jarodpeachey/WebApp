@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import styled, { withTheme } from 'styled-components';
+import { styled } from 'linaria/react';
+
 
 class PricingSwitch extends PureComponent {
   static propTypes = {
@@ -70,14 +71,14 @@ const Container = styled.div`
   margin: 0 auto;
   margin-bottom: 32px;
   cursor: pointer;
-  border: 1px solid ${({ chosenBackgroundColor }) => chosenBackgroundColor};
+  border: 1px solid ${props => props.chosenBackgroundColor};
   transition: all 150ms ease-in;
 `;
 
 const Choice = styled.div`
   display: flex;
-  background: ${({ thisPricingPlanInView, chosenBackgroundColor }) => (thisPricingPlanInView ? chosenBackgroundColor : 'transparent')};
-  color: ${({ thisPricingPlanInView, chosenBackgroundColor, chosenTextColor }) => (thisPricingPlanInView ? chosenTextColor : chosenBackgroundColor)};
+  background: ${props => (props.thisPricingPlanInView ? props.chosenBackgroundColor : 'transparent')};
+  color: ${props => (props.thisPricingPlanInView ? props.chosenTextColor : props.chosenBackgroundColor)};
   border-radius: 64px;
   text-transform: uppercase;
   width: 50%;
@@ -97,4 +98,4 @@ const ChoiceText = styled.p`
   }
 `;
 
-export default withTheme(PricingSwitch);
+export default PricingSwitch;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 // import Edit from '@material-ui/icons/Edit';
 // import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import CheckCircle from '@material-ui/icons/CheckCircle';

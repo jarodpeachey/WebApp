@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import SuggestedFriendList from './SuggestedFriendList';
 import FriendActions from '../../actions/FriendActions';
 import FriendStore from '../../stores/FriendStore';

@@ -4,7 +4,7 @@ import {
   Form, InputGroup, FormControl,
 } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles } from '@material-ui/core/styles';
 import Helmet from 'react-helmet';
 import AnalyticsActions from '../../actions/AnalyticsActions';

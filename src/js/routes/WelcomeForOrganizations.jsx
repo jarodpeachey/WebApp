@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import ffwdLogo from '../../img/global/logos/ffwd-logo.png';

@@ -1,5 +1,7 @@
 // See also mui-theme.js
 // I recommend being cautious about using 'md' for transitions relating explicitly to mobile, tablet, desktop
+import { createTheming } from '@callstack/react-theme-provider';
+
 const theme = {
   breakpoints: {
     xs: '320px',
@@ -24,4 +26,9 @@ const theme = {
   },
 };
 
-export default theme;
+const { ThemeProvider, withTheme } = createTheming(theme);
+
+export {
+  ThemeProvider,
+  withTheme,
+};

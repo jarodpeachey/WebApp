@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import ArrowBack from '@material-ui/icons/ArrowBack';

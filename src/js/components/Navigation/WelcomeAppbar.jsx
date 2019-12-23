@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Appbar from '@material-ui/core/AppBar/index';
 import Toolbar from '@material-ui/core/Toolbar/index';

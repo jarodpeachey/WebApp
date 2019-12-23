@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import PropTypes from 'prop-types';
 import { Alert } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';

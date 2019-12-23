@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { withStyles } from '@material-ui/core/styles';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Button from '@material-ui/core/Button';
 import DoneIcon from '@material-ui/icons/Done';
 import ThumbsUpIcon from '@material-ui/icons/ThumbUp';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { Link } from 'react-router';
 import { cordovaDot, isCordova } from '../../utils/cordovaUtils';
 import logoLight from '../../../img/global/svg-icons/we-vote-logo-horizontal-color-200x66.svg';

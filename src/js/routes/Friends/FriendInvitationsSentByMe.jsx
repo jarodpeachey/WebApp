@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import _ from 'lodash';
 import FriendInvitationList from '../../components/Friends/FriendInvitationList';
 import FriendActions from '../../actions/FriendActions';

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Alert } from 'react-bootstrap';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles } from '@material-ui/core/styles/index';
 import { isSpeakerTypeOrganization } from '../../utils/organization-functions';
 import { renderLog } from '../../utils/logging';

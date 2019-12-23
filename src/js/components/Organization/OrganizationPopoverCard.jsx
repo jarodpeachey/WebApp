@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import FollowToggle from '../Widgets/FollowToggle';
 import LoadingWheel from '../LoadingWheel';
 import OpenExternalWebSite from '../Widgets/OpenExternalWebSite';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles } from '@material-ui/core';
 import StripeElementsTestForm from './StripeElementsTestForm';
 import { renderLog } from '../../utils/logging';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles, withTheme } from '@material-ui/core';
 import { capitalizeString } from '../../utils/textFormat';
 import { hasIPhoneNotch, historyPush, isCordova } from '../../utils/cordovaUtils';

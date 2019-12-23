@@ -4,12 +4,12 @@ import {
   browserHistory, hashHistory, Router, applyRouterMiddleware,
 } from 'react-router';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import { ThemeProvider } from 'styled-components';
+// import { ThemeProvider } from 'styled-components';
 import { useScroll } from 'react-router-scroll';
 import { isCordova, setGlobalScreenSize } from './utils/cordovaUtils';
 import routes from './Root';
 import muiTheme from './mui-theme';
-import styledTheme from './styled-theme';
+import { ThemeProvider } from './linaria-theme';
 import { numberOfNeedlesFoundInString } from './utils/search-functions';
 import webAppConfig from './config';
 
@@ -50,7 +50,7 @@ function startApp () {
   render(
     // eslint-disable-next-line react/jsx-filename-extension
     <MuiThemeProvider theme={muiTheme}>
-      <ThemeProvider theme={styledTheme}>
+      <ThemeProvider>
         <Router
           history={isCordova() ? hashHistory : browserHistory}
           render={applyRouterMiddleware(useScroll(() => true))}

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import styled, { withTheme } from 'styled-components';
+import { styled } from 'linaria/react';
+import { withTheme } from '../../linaria-theme';
 
 class HeaderSwitch extends PureComponent {
   static propTypes = {
@@ -46,10 +47,10 @@ const Container = styled.div`
   transition: all 150ms ease-in;
 `;
 
-const Choice = styled.div`
+const Choice = withTheme(styled.div`
   display: flex;
-  background: ${({ selectedCategoryIndex, color }) => (selectedCategoryIndex ? color : 'transparent')};
-  color: ${({ selectedCategoryIndex, color, theme }) => (selectedCategoryIndex ? theme.colors.brandBlue : color)};
+  background: ${(props => (props.selectedCategoryIndex ? props.color : 'transparent'))};
+  color: ${(props => (props.selectedCategoryIndex ? props.theme.colors.brandBlue : props.color))};
   border-radius: 64px;
   text-transform: uppercase;
   width: 50%;
@@ -57,7 +58,7 @@ const Choice = styled.div`
   align-items: center;
   justify-content: center;
   transition: all 150ms ease-in;
-`;
+`);
 
 const ChoiceText = styled.p`
   margin: auto;
@@ -66,4 +67,4 @@ const ChoiceText = styled.p`
   transition: all 150ms ease-in;
 `;
 
-export default withTheme(HeaderSwitch);
+export default HeaderSwitch;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Card from '@material-ui/core/Card';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { withStyles, withTheme } from '@material-ui/core/styles';

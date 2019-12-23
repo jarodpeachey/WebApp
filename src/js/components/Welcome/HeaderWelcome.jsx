@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import { styled } from 'linaria/react';
 
 const Title = styled.h1`
   font-weight: bold;
@@ -19,35 +19,33 @@ const BlueTitle = styled.span`
   margin-bottom: 1em;
 `;
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
-
-const fadeOut = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
-
 const SubTitle = styled.h3`
   font-weight: 300;
   font-size: 24px;
   text-align: center;
   visibility: ${props => (props.out ? 'hidden' : 'visible')};
-  animation: ${props => (props.out ? fadeOut : fadeIn)} 300ms ease-in;
+  animation: ${props => (props.out ? 'fadeOut' : 'fadeIn')} 300ms ease-in;
   transition: visibility 1s linear;
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 20px;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
   }
 `;
 

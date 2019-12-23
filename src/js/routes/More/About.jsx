@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles } from '@material-ui/core/styles';
 import { cordovaScrollablePaneTopPadding } from '../../utils/cordovaOffsets';
 import { cordovaDot } from '../../utils/cordovaUtils';

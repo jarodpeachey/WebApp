@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Card from '@material-ui/core/Card';
 import BallotIcon from '@material-ui/icons/Ballot';
 import Button from '@material-ui/core/Button';

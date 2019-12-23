@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import LoadingWheel from '../LoadingWheel';
 import OrganizationStore from '../../stores/OrganizationStore';
 import { renderLog } from '../../utils/logging';

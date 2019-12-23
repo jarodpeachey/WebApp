@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withTheme } from '@material-ui/core/styles';
 import IssueActions from '../../actions/IssueActions';
 import IssueCardCompressed from './IssueCardCompressed';

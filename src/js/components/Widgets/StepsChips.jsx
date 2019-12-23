@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import styled, { withTheme } from 'styled-components';
+import { styled } from 'linaria/react';
+import { withTheme } from '../../linaria-theme';
+
 
 class StepChips extends PureComponent {
   static propTypes = {
@@ -45,33 +47,33 @@ class StepChips extends PureComponent {
   }
 }
 
-const Wrapper = styled.div`
+const Wrapper = withTheme(styled.div`
   display: flex;
   flex-flow: row;
   height: 44px;
   width: 100%;
   margin: 16px 0;
-  background: ${({ theme }) => theme.colors.grayPale};
+  background: ${props => props.theme.colors.grayPale};
   justify-content: space-between;
   border-radius: 64px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media (max-width: ${props => props.theme.breakpoints.lg}) {
     background: rgba(255, 255, 255, 0.1);
     height: 32px;
     margin: auto 0;
     padding: 0 4px;
   }
-`;
+`);
 
-const Chip = styled.div`
+const Chip = withTheme(styled.div`
   display: flex;
   flex-flow: row;
   min-width: 100px;
-  width: ${({ count }) => `${100 / count}%`};
+  width: ${props => `${100 / props.count}%`};
   font-size: 16px;
   height: 36px;
   cursor: pointer;
-  background: ${({ selected, theme }) => (selected ? theme.colors.brandBlue : theme.colors.grayChip)};
-  color: ${({ selected, theme }) => (selected ? 'white' : theme.colors.brandBlue)};
+  background: ${props => (props.selected ? props.theme.colors.brandBlue : props.theme.colors.grayChip)};
+  color: ${props => (props.selected ? 'white' : props.theme.colors.brandBlue)};
   border-radius: 64px;
   margin: auto 6px;
   transition: all 150ms ease-in;
@@ -81,25 +83,25 @@ const Chip = styled.div`
   &:active {
     filter: brightness(102%);
   }
-`;
+`);
 
-const ChipIndex = styled.p`
+const ChipIndex = withTheme(styled.p`
   margin: auto 6px;
-  background: ${({ selected, theme }) => (selected ? theme.colors.brandBlue : theme.colors.grayPale)};
+  background: ${props => (props.selected ? props.theme.colors.brandBlue : props.theme.colors.grayPale)};
   border-radius: 64px;
   padding: 2px 9px;
   font-weight: bold;
   transition: all 150ms ease-in;
   cursor: pointer;
   filter: ${({ selected }) => (selected ? 'brightness(150%)' : 'brightness(100%)')};
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    color: ${({ theme }) => theme.colors.brandBlue};
-    background: ${({ selected }) => (selected ? 'white' : 'rgba(255, 255, 255, 0.2)')};
+  @media (max-width: ${props => props.theme.breakpoints.lg}) {
+    color: ${props => props.theme.colors.brandBlue};
+    background: ${props => (props.selected ? 'white' : 'rgba(255, 255, 255, 0.2)')};
     margin: auto 2px;
     font-size: 14px;
     padding: 2px 8px;
   }
-`;
+`);
 
 const ChipLabel = styled.p`
   margin: auto;
@@ -108,4 +110,4 @@ const ChipLabel = styled.p`
   transition: all 150ms ease-in;
 `;
 
-export default withTheme(StepChips);
+export default StepChips;

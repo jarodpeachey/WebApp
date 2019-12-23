@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import CodeCopier from '../Widgets/CodeCopier';
 import { cordovaScrollablePaneTopPadding } from '../../utils/cordovaOffsets';
 import OpenExternalWebSite from '../Widgets/OpenExternalWebSite';

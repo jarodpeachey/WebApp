@@ -1,5 +1,5 @@
 import React, { Component, Suspense } from 'react';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import GuideList from '../VoterGuide/GuideList';
 import VoterGuideStore from '../../stores/VoterGuideStore';
 import { renderLog } from '../../utils/logging';

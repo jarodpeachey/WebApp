@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import BallotStore from '../../stores/BallotStore';
 import BallotSideBarLink from './BallotSideBarLink';
 import { renderLog } from '../../utils/logging';

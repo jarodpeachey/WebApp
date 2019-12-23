@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import cookies from '../../utils/cookies';
 import AnalyticsActions from '../../actions/AnalyticsActions';
 import AppActions from '../../actions/AppActions';

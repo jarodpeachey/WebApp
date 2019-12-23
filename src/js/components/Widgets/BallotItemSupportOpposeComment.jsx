@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import CandidateStore from '../../stores/CandidateStore';
 import ItemActionBar from './ItemActionBar';
 import ItemPositionStatementActionBar from './ItemPositionStatementActionBar';

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { Button, withStyles } from '@material-ui/core';
 import { renderLog } from '../../utils/logging';
 

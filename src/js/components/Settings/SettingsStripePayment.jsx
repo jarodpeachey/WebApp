@@ -3,7 +3,7 @@ import { CardElement, injectStripe } from 'react-stripe-elements';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import LoadingWheel from '../LoadingWheel';
 import { renderLog } from '../../utils/logging';
 import VoterStore from '../../stores/VoterStore';

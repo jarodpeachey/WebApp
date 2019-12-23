@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { oAuthLog, renderLog } from '../../utils/logging';
 import AppStore from '../../stores/AppStore';
 import FacebookActions from '../../actions/FacebookActions';

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import moment from 'moment';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Badge from '@material-ui/core/Badge';
 import Chip from '@material-ui/core/Chip';
 import Link from '@material-ui/core/Link';

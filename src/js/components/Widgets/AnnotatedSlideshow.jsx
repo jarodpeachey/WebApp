@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
-import styled, { withTheme } from 'styled-components';
+import { styled } from 'linaria/react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import { withTheme } from '../../linaria-theme';
 import { cordovaDot } from '../../utils/cordovaUtils';
 
 class AnnotatedSlideshow extends PureComponent {
@@ -91,24 +92,24 @@ const styles = theme => ({
   },
 });
 
-const Wrapper = styled.div`
+const Wrapper = withTheme(styled.div`
   display: flex;
   flex-flow: column;
   text-align: left;
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media (max-width: ${props => props.theme.breakpoints.lg}) {
     padding: 1em 0;
   }
-`;
+`);
 
-const SlideShowTitle = styled.h3`
+const SlideShowTitle = withTheme(styled.h3`
   font-weight: bold;
   font-size: 24px;
   margin-top: 36px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media (max-width: ${props => props.theme.breakpoints.lg}) {
     font-size: 20px;
     margin-top: 16px;
   }
-`;
+`);
 
 const Description = styled.p`
   font-size: 16px;
@@ -122,7 +123,7 @@ const Slide = styled.div`
   justify-content: space-between;
 `;
 
-const Nav = styled.div`
+const Nav = withTheme(styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,33 +132,33 @@ const Nav = styled.div`
   height: 100px;
   border-radius: 100rem;
   transition: all 150ms ease-in;
-  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   font-size: 72px;
-  background: ${({ disabled, theme }) => (disabled ? theme.colors.grayPale : theme.colors.grayChip)};
-  color: ${({ disabled, theme }) => (disabled ? theme.colors.grayChip : theme.colors.brandBlue)};
+  background: ${props => (props.disabled ? props.theme.colors.grayPale : theme.colors.grayChip)};
+  color: ${props => (props.disabled ? props.theme.colors.grayChip : theme.colors.brandBlue)};
   &:hover {
-    filter: ${({ disabled }) => (disabled ? '' : 'brightness(102%)')};
+    filter: ${props => (props.disabled ? '' : 'brightness(102%)')};
   }
   &:active {
-    filter: ${({ disabled }) => (disabled ? '' : 'brightness(105%)')};
+    filter: ${props => (props.disabled ? '' : 'brightness(105%)')};
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media (max-width: ${props => props.theme.breakpoints.lg}) {
     display: none;
   }
-`;
+`);
 
-const Image = styled.img`
+const Image = withTheme(styled.img`
   width: 640px;
   border: 1px solid #999;
   border-radius: 16px;
-  box-shadow: 2px 2px 4px 2px ${({ theme }) => theme.colors.grayLight};
+  box-shadow: 2px 2px 4px 2px ${props => props.theme.colors.grayLight};
   height: 360px;
   max-width: 90vw;
   transition: all 150ms ease-in;
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media (max-width: ${props => props.theme.breakpoints.lg}) {
     width: 90vw;
     height: calc(90vw * 0.5625);
   }
-`;
+`);
 
-export default withStyles(styles)(withTheme(AnnotatedSlideshow));
+export default withStyles(styles)(AnnotatedSlideshow);

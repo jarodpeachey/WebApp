@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactSVG from 'react-svg';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles, withTheme } from '@material-ui/core/styles';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';

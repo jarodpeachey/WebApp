@@ -8,7 +8,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import InputBase from '@material-ui/core/InputBase';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import PremiumableButton from '../Widgets/PremiumableButton';
 import AppActions from '../../actions/AppActions';
 import LoadingWheel from '../LoadingWheel';

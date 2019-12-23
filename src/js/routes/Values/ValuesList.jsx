@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import IssueActions from '../../actions/IssueActions';

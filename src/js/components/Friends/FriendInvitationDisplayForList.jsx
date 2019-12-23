@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { Button } from '@material-ui/core';
 import ImageHandler from '../ImageHandler';
 import FriendActions from '../../actions/FriendActions';

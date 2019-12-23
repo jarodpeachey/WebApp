@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles } from '@material-ui/core';
 import DonationListForm from '../../components/Donation/DonationListForm';
 import { renderLog } from '../../utils/logging';

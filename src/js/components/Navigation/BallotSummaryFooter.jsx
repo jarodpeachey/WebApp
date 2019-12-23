@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Ballot from '@material-ui/icons/Ballot';
 import Typography from '@material-ui/core/Typography';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import BallotStore from '../../stores/BallotStore';
 import BallotSideBarLink from './BallotSideBarLink';
 import { renderLog } from '../../utils/logging';

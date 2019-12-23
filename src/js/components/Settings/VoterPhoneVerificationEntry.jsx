@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import PropTypes from 'prop-types';
 import { isValidPhoneNumber } from 'react-phone-number-input';
 import { withStyles } from '@material-ui/core/styles';

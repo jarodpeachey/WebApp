@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { cordovaDot } from '../../utils/cordovaUtils';
 import OpenExternalWebSite from './OpenExternalWebSite';
 import positionIcon from '../../../img/global/svg-icons/positions-icon-24-x-24.svg';

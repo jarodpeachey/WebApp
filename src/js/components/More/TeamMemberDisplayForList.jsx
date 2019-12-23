@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
+import { styled } from 'linaria/react';
 import { renderLog } from '../../utils/logging';
 import ImageHandler from '../ImageHandler';
 
@@ -116,15 +116,6 @@ const CardDefault = styled.div`
   }
 `;
 
-const scaleCard = keyframes`
-  from {
-    box-shadow: 1px .5px 5px 0 #cacaca;
-  }
-  to {
-    box-shadow: 2px 1px 20px 5px #e1e1e1;
-  }
-`;
-
 const CardHover = styled.div`
   background: white;
   margin: 0 auto;
@@ -135,9 +126,17 @@ const CardHover = styled.div`
   box-shadow: 1px .5px 5px 0 #cacaca;
   border: 1px solid #cacaca;
   @media (min-width: 576px) {
-    animation: ${scaleCard} .25s ease-out;
+    animation: scaleCard .25s ease-out;
     animation-fill-mode: forwards;
     text-align: left;
+  }
+  @keyframes scaleCard {
+    from {
+      box-shadow: 1px .5px 5px 0 #cacaca;
+    }
+    to {
+      box-shadow: 2px 1px 20px 5px #e1e1e1;
+    }
   }
 `;
 

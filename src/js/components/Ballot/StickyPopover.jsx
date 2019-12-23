@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Overlay, Popover } from 'react-bootstrap';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import PropTypes from 'prop-types';
 import { renderLog } from '../../utils/logging';
 

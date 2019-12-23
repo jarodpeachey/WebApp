@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { cordovaScrollablePaneTopPadding } from '../../utils/cordovaOffsets';
 import { renderLog } from '../../utils/logging';
 

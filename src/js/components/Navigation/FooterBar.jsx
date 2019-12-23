@@ -8,7 +8,7 @@ import HelpOutline from '@material-ui/icons/HelpOutline';
 import BallotIcon from '@material-ui/icons/Ballot';
 import HowToVoteIcon from '@material-ui/icons/HowToVote';
 import PeopleIcon from '@material-ui/icons/People';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { cordovaFooterHeight } from '../../utils/cordovaOffsets';
 import { historyPush, isCordova, cordovaOpenSafariView } from '../../utils/cordovaUtils';
 import { stringContains } from '../../utils/textFormat';

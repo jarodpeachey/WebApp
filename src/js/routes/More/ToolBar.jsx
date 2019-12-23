@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles } from '@material-ui/core';
 import { renderLog } from '../../utils/logging';

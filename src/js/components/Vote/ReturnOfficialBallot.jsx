@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { withStyles } from '@material-ui/core/styles/index';
 import cookies from '../../utils/cookies';
 import { renderLog } from '../../utils/logging';

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import TextTruncate from 'react-text-truncate';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import BallotItemSupportOpposeComment from '../Widgets/BallotItemSupportOpposeComment';
 import BallotItemSupportOpposeCountDisplay from '../Widgets/BallotItemSupportOpposeCountDisplay';
 import CandidateStore from '../../stores/CandidateStore';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import AddFriendsByEmail from '../../components/Friends/AddFriendsByEmail';
 import AnalyticsActions from '../../actions/AnalyticsActions';
 import CurrentFriends from '../../components/Connect/CurrentFriends';

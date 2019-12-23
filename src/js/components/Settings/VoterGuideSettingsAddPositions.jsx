@@ -5,7 +5,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Card from '@material-ui/core/Card';
 import BallotIcon from '@material-ui/icons/Ballot';
 import Button from '@material-ui/core/Button';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import BallotItemForAddPositions from './BallotItemForAddPositions';
 import BallotActions from '../../actions/BallotActions';
 import BallotStore from '../../stores/BallotStore';

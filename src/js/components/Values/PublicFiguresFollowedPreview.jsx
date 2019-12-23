@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import styled from 'styled-components';
+import { styled } from 'linaria/react';
 import { renderLog } from '../../utils/logging';
 import OrganizationStore from '../../stores/OrganizationStore';
 import OrganizationActions from '../../actions/OrganizationActions';

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
+import { styled } from 'linaria/react';
 import BallotItemSupportOpposeComment from '../Widgets/BallotItemSupportOpposeComment';
 import BallotItemSupportOpposeCountDisplay from '../Widgets/BallotItemSupportOpposeCountDisplay';
 import { cordovaStickyHeaderPaddingTop } from '../../utils/cordovaOffsets';
@@ -112,9 +112,17 @@ const Wrapper = styled.div`
   z-index: 2;
   width: 100vw;
   box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
-  animation: ${slideDown} 150ms ease-in;
+  animation: slideDown 150ms ease-in;
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     padding-top: 48px;
+  }
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
 `;
 
