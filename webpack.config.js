@@ -16,45 +16,33 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'styles.css',
-    }),
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-    new CopyPlugin([
-      { from: 'src/javascript/', to: 'javascript/' },
-      { from: 'src/img/global/icons/', to: 'img/global/icons/' },
-      { from: 'src/img/global/intro-story/', to: 'img/global/intro-story/' },
-      { from: 'src/img/global/logos/', to: 'img/global/logos/' },
-      { from: 'src/img/global/photos/', to: 'img/global/photos/' },
-      { from: 'src/img/global/svg-icons/', to: 'img/global/svg-icons/' },
-      { from: 'src/img/how-it-works/', to: 'img/how-it-works/' },
-      { from: 'src/img/tools/', to: 'img/tools/' },
-      { from: 'src/img/welcome/', to: 'img/welcome/' },
-      { from: 'src/img/welcome/benefits/', to: 'img/welcome/benefits/' },
-      { from: 'src/img/welcome/partners/', to: 'img/welcome/partners/' },
-      { from: 'src/img/endorsement-extension/', to: 'img/endorsement-extension/' },
-      { from: 'src/vip.html', to: '.' },
-      { from: 'src/css/', to: 'css/' },
-    ]),
-    new InjectManifest({
-      swSrc: './src/serviceWorker.js',
-      swDest: 'sw.js',
-    }),
-    // new BundleAnalyzerPlugin(),  // Enable this to start an (amazing) bundle size analyzer tool
-  ],
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [
-          'babel-loader',
+          { loader: 'babel-loader' },
           {
             loader: 'linaria/loader',
+            options: {
+              sourceMap: process.env.NODE_ENV !== 'production',
+              cacheDirectory: '.linaria',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV !== 'production',
+            },
+          },
+          {
+            loader: 'css-loader',
             options: {
               sourceMap: process.env.NODE_ENV !== 'production',
             },
@@ -93,25 +81,39 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: process.env.NODE_ENV !== 'production',
-            },
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: process.env.NODE_ENV !== 'production',
-            },
-          },
-        ],
-      },
     ],
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+    }),
+    new CopyPlugin([
+      { from: 'src/javascript/', to: 'javascript/' },
+      { from: 'src/img/global/icons/', to: 'img/global/icons/' },
+      { from: 'src/img/global/intro-story/', to: 'img/global/intro-story/' },
+      { from: 'src/img/global/logos/', to: 'img/global/logos/' },
+      { from: 'src/img/global/photos/', to: 'img/global/photos/' },
+      { from: 'src/img/global/svg-icons/', to: 'img/global/svg-icons/' },
+      { from: 'src/img/how-it-works/', to: 'img/how-it-works/' },
+      { from: 'src/img/tools/', to: 'img/tools/' },
+      { from: 'src/img/welcome/', to: 'img/welcome/' },
+      { from: 'src/img/welcome/benefits/', to: 'img/welcome/benefits/' },
+      { from: 'src/img/welcome/partners/', to: 'img/welcome/partners/' },
+      { from: 'src/img/endorsement-extension/', to: 'img/endorsement-extension/' },
+      { from: 'src/vip.html', to: '.' },
+      { from: 'src/css/', to: 'css/' },
+      // { from: 'linaria-cache/', to: 'css/linaria/' },
+    ]),
+    new InjectManifest({
+      swSrc: './src/serviceWorker.js',
+      swDest: 'sw.js',
+    }),
+    // new BundleAnalyzerPlugin(),  // Enable this to start an (amazing) bundle size analyzer tool
+  ],
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['.js', '.jsx'],

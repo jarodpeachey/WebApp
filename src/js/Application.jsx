@@ -21,6 +21,7 @@ import webAppConfig from './config';
 import { stringContains } from './utils/textFormat';
 import SnackNotifier from './components/Widgets/SnackNotifier';
 import displayFriendsTabs from './utils/displayFriendsTabs';
+import { withTheme } from './linaria-theme';
 
 class Application extends Component {
   static propTypes = {
@@ -418,25 +419,25 @@ class Application extends Component {
   }
 }
 
-const Wrapper = styled.div`
-  padding-top: ${({ padTop }) => padTop};
-`;
+const Wrapper = withTheme(styled.div`
+  padding-top: ${props => props.padTop};
+`);
 
 const LoadingScreen = styled.div`
-  position: 'fixed',
-  height: '100vh',
-  width: '100vw',
-  display: 'flex',
-  top: 0,
-  left: 0,
-  background-color: '#2E3C5D',
-  justify-content: 'center',
-  align-items: 'center',
-  font-size: '30px',
-  color: '#fff',
-  flex-direction: 'column',
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: #2E3C5D;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #fff;
+  flex-direction: column;
   @media print{
-    color: '#2E3C5D';
+    color: #2E3C5D;
   }
 `;
 
